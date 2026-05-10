@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 export default function BuscarCep() {
   const [cep, setCep] = useState("");
@@ -16,8 +17,10 @@ export default function BuscarCep() {
   };
   return (
     <form onSubmit={buscar}>
+      <label for="cep">Digite o cep do endereço que deseja encontrar:</label>
       <input
         type="text"
+        id="cep"
         placeholder="Digite o CEP"
         value={cep}
         onChange={(e) => setCep(e.target.value)}
